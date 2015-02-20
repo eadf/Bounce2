@@ -65,6 +65,9 @@ class Bounce
     // Returns the rising pin state
     bool rose();
 
+    // returns the duration [ms] the pin has been in current state (totally undisturbed)
+    unsigned long duration();
+    
  protected:
     unsigned long previous_millis;
     uint16_t interval_millis;

@@ -90,3 +90,8 @@ bool Bounce::fell()
 {
     return !( state & _BV(DEBOUNCED_STATE) ) && ( state & _BV(STATE_CHANGED));
 }
+
+unsigned long Bounce::duration()
+{
+    return millis()-previous_millis;
+}
